@@ -4,7 +4,7 @@ const colors = require('colors')
 const connectDB = require("./config/db") 
 
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 6000
 
 //app initialize
 
@@ -21,5 +21,5 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/api/orders', require("./routes/orderRoutes"))
 
 
-app.listen("5000", ()=>console.log(`Server connected ${port}`.bgMagenta))
+app.listen(port, ()=>console.log(`Server connected ${port}`.bgMagenta))
 
